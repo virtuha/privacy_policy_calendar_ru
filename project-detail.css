@@ -1,0 +1,255 @@
+.project-detail {
+    padding: 120px 2rem 50px;
+    min-height: 100vh;
+}
+
+.project-header {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 3rem;
+    background: rgba(40, 40, 40, 0.3);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.project-detail-image {
+    width: 256px;
+    height: 256px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-header-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #fff, #00d9ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.project-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+.project-content {
+    background: rgba(40, 40, 40, 0.3);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.project-description h2 {
+    color: #00d9ff;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.project-description h3 {
+    color: #00d9ff;
+    margin: 2rem 0 1rem 0;
+    font-size: 1.4rem;
+}
+
+.project-description p {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+}
+
+.features-list li {
+    padding: 0.5rem 0;
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+.tech-tags {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.tech-tag {
+    background: rgba(0, 217, 255, 0.1);
+    color: #00d9ff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 217, 255, 0.2);
+    font-size: 0.9rem;
+}
+
+.project-actions {
+    text-align: center;
+}
+
+.back-button {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.privacy-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.privacy-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    border-bottom: 1px solid transparent;
+}
+
+.privacy-link:hover {
+    color: #00d9ff;
+    border-bottom-color: #00d9ff;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.screenshots-gallery {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 217, 255, 0.3) rgba(255, 255, 255, 0.1);
+    cursor: grab;
+}
+
+.screenshots-gallery::-webkit-scrollbar {
+    height: 8px;
+}
+
+.screenshots-gallery::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.screenshots-gallery::-webkit-scrollbar-thumb {
+    background: rgba(0, 217, 255, 0.3);
+    border-radius: 4px;
+}
+
+.screenshots-gallery::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 217, 255, 0.5);
+}
+
+.screenshot-item {
+    flex: 0 0 auto;
+    width: 280px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.screenshot-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 217, 255, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 217, 255, 0.2);
+}
+
+.screenshot-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Адаптивность */
+
+@media (max-width: 768px) {
+    .project-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    
+    .project-detail-image {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .project-header-info h1 {
+        font-size: 2rem;
+    }
+    
+    .project-content {
+        padding: 2rem;
+    }
+    
+    .screenshot-item {
+        width: 220px;
+        height: 400px;
+    }
+    
+    .privacy-links {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-detail {
+        padding: 100px 1rem 30px;
+    }
+    
+    .project-header {
+        padding: 1.5rem;
+    }
+    
+    .project-content {
+        padding: 1.5rem;
+    }
+    
+    .project-header-info h1 {
+        font-size: 1.8rem;
+    }
+    
+    .screenshot-item {
+        width: 180px;
+        height: 320px;
+    }
+    
+    .privacy-links {
+        gap: 0.6rem;
+    }
+}
